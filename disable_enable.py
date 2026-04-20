@@ -6,18 +6,18 @@ from PIL import Image, ImageTk
 #################### Switch Info ####################
 cisco_switch = {
     'device_type': 'cisco_xe',
-    'host': '172.16.41.31',
-    'username': 'lcec',
-    'password': '@77|7uDE|1',
-    'secret': '@77|7uDE|1',
+    'host': 'x',
+    'username': 'x',
+    'password': 'x',
+    'secret': 'x',
 }
 
 mail_switch = {
     'device_type': 'cisco_xe',
-    'host': '172.16.41.41',
-    'username': 'lcec',
-    'password': '@77|7uDE|1',
-    'secret': '@77|7uDE|1',
+    'host': 'x',
+    'username': 'x',
+    'password': 'x',
+    'secret': 'x',
 }
 
 #################### Set Up GUI ####################
@@ -40,14 +40,14 @@ image_label.pack()
 def disable_dtarin():
     with ConnectHandler(**cisco_switch) as net_connect:
         net_connect.enable()
-        commands = ['interface Gi5/0/46', 'shutdown']
+        commands = ['interface x', 'shutdown']
         net_connect.send_config_set(commands)
         print("Disabled")
 
 def enable_dtarin():
     with ConnectHandler(**cisco_switch) as net_connect:
         net_connect.enable()
-        commands = ['interface Gi5/0/46', 'no shutdown']
+        commands = ['interface x', 'no shutdown']
         net_connect.send_config_set(commands)
         print("Enabled")
 
@@ -55,14 +55,14 @@ def enable_dtarin():
 def disable_lholguin():
     with ConnectHandler(**cisco_switch) as net_connect:
         net_connect.enable()
-        commands = ['interface Gi5/0/36', 'shutdown']
+        commands = ['interface x', 'shutdown']
         net_connect.send_config_set(commands)
         print("Disabled")
 
 def enable_lholguin():
     with ConnectHandler(**cisco_switch) as net_connect:
         net_connect.enable()
-        commands = ['interface Gi5/0/36', 'no shutdown']
+        commands = ['interface x', 'no shutdown']
         net_connect.send_config_set(commands)
         print("Enabled")
 
@@ -70,14 +70,14 @@ def enable_lholguin():
 def disable_jortega():
     with ConnectHandler(**cisco_switch) as net_connect:
         net_connect.enable()
-        commands = ['interface Gi2/0/27', 'shutdown']
+        commands = ['interface x', 'shutdown']
         net_connect.send_config_set(commands)
         print("Disabled")
 
 def enable_jortega():
     with ConnectHandler(**cisco_switch) as net_connect:
         net_connect.enable()
-        commands = ['interface Gi2/0/27', 'no shutdown']
+        commands = ['interface x', 'no shutdown']
         net_connect.send_config_set(commands)
         print("Enabled")
 
@@ -85,14 +85,14 @@ def enable_jortega():
 def disable_kcoleman():
     with ConnectHandler(**cisco_switch) as net_connect:
         net_connect.enable()
-        commands = ['interface Gi5/0/29', 'shutdown']
+        commands = ['interface x', 'shutdown']
         net_connect.send_config_set(commands)
         print("Disabled")
 
 def enable_kcoleman():
     with ConnectHandler(**cisco_switch) as net_connect:
         net_connect.enable()
-        commands = ['interface Gi5/0/29', 'no shutdown']
+        commands = ['interface x', 'no shutdown']
         net_connect.send_config_set(commands)
         print("Enabled")
 
@@ -100,14 +100,14 @@ def enable_kcoleman():
 def disable_train1():
     with ConnectHandler(**cisco_switch) as net_connect:
         net_connect.enable()
-        commands = ['interface Gi1/0/45', 'shutdown']
+        commands = ['interface x', 'shutdown']
         net_connect.send_config_set(commands)
         print("Disabled")
 
 def enable_train1():
     with ConnectHandler(**cisco_switch) as net_connect:
         net_connect.enable()
-        commands = ['interface Gi1/0/45', 'no shutdown']
+        commands = ['interface x', 'no shutdown']
         net_connect.send_config_set(commands)
         print("Enabled")
 
@@ -115,14 +115,14 @@ def enable_train1():
 def disable_rarroyo():
     with ConnectHandler(**cisco_switch) as net_connect:
         net_connect.enable()
-        commands = ['interface Gi1/0/18', 'shutdown']
+        commands = ['interface x', 'shutdown']
         net_connect.send_config_set(commands)
         print("Disabled")
 
 def enable_rarroyo():
     with ConnectHandler(**cisco_switch) as net_connect:
         net_connect.enable()
-        commands = ['interface Gi1/0/18', 'no shutdown']
+        commands = ['interface x', 'no shutdown']
         net_connect.send_config_set(commands)
         print("Enabled")
 
@@ -130,14 +130,14 @@ def enable_rarroyo():
 def disable_mvalencia():
     with ConnectHandler(**cisco_switch) as net_connect:
         net_connect.enable()
-        commands = ['interface Gi2/0/14', 'shutdown']
+        commands = ['interface x', 'shutdown']
         net_connect.send_config_set(commands)
         print("Disabled")
 
 def enable_mvalencia():
     with ConnectHandler(**cisco_switch) as net_connect:
         net_connect.enable()
-        commands = ['interface Gi2/0/14', 'no shutdown']
+        commands = ['interface x', 'no shutdown']
         net_connect.send_config_set(commands)
         print("Enabled")
 
@@ -145,14 +145,14 @@ def enable_mvalencia():
 def disable_cbessen():
     with ConnectHandler(**cisco_switch) as net_connect:
         net_connect.enable()
-        commands = ['interface Gi1/0/25', 'shutdown']
+        commands = ['interface x', 'shutdown']
         net_connect.send_config_set(commands)
         print("Disabled")
 
 def enable_cbessen():
     with ConnectHandler(**cisco_switch) as net_connect:
         net_connect.enable()
-        commands = ['interface Gi1/0/25', 'no shutdown']
+        commands = ['interface x', 'no shutdown']
         net_connect.send_config_set(commands)
         print("Enabled")
 
@@ -160,14 +160,14 @@ def enable_cbessen():
 def disable_aaranda():
     with ConnectHandler(**cisco_switch) as net_connect:
         net_connect.enable()
-        commands = ['interface Gi2/0/40', 'shutdown']
+        commands = ['interface x', 'shutdown']
         net_connect.send_config_set(commands)
         print("Disabled")
 
 def enable_aaranda():
     with ConnectHandler(**cisco_switch) as net_connect:
         net_connect.enable()
-        commands = ['interface Gi2/0/40', 'no shutdown']
+        commands = ['interface x', 'no shutdown']
         net_connect.send_config_set(commands)
         print("Enabled")
 
@@ -175,14 +175,14 @@ def enable_aaranda():
 def disable_jwatson():
     with ConnectHandler(**cisco_switch) as net_connect:
         net_connect.enable()
-        commands = ['interface Gi1/0/26', 'shutdown']
+        commands = ['interface x', 'shutdown']
         net_connect.send_config_set(commands)
         print("Disabled")
 
 def enable_jwatson():
     with ConnectHandler(**cisco_switch) as net_connect:
         net_connect.enable()
-        commands = ['interface Gi1/0/26', 'no shutdown']
+        commands = ['interface x', 'no shutdown']
         net_connect.send_config_set(commands)
         print("Enabled")
 
@@ -190,14 +190,14 @@ def enable_jwatson():
 def disable_dmcdaniel():
     with ConnectHandler(**cisco_switch) as net_connect:
         net_connect.enable()
-        commands = ['interface Gi5/0/33', 'shutdown']
+        commands = ['interface x', 'shutdown']
         net_connect.send_config_set(commands)
         print("Disabled")
 
 def enable_dmcdaniel():
     with ConnectHandler(**cisco_switch) as net_connect:
         net_connect.enable()
-        commands = ['interface Gi5/0/33', 'no shutdown']
+        commands = ['interface x', 'no shutdown']
         net_connect.send_config_set(commands)
         print("Enabled")
 
@@ -205,14 +205,14 @@ def enable_dmcdaniel():
 def disable_ndominguez():
     with ConnectHandler(**cisco_switch) as net_connect:
         net_connect.enable()
-        commands = ['interface Gi1/0/7', 'shutdown']
+        commands = ['interface x', 'shutdown']
         net_connect.send_config_set(commands)
         print("Disabled")
 
 def enable_ndominguez():
     with ConnectHandler(**cisco_switch) as net_connect:
         net_connect.enable()
-        commands = ['interface Gi1/0/7', 'no shutdown']
+        commands = ['interface x', 'no shutdown']
         net_connect.send_config_set(commands)
         print("Enabled")
 
@@ -220,14 +220,14 @@ def enable_ndominguez():
 def disable_jsalcido():
     with ConnectHandler(**cisco_switch) as net_connect:
         net_connect.enable()
-        commands = ['interface Gi1/0/35', 'shutdown']
+        commands = ['interface x', 'shutdown']
         net_connect.send_config_set(commands)
         print("Disabled")
 
 def enable_jsalcido():
     with ConnectHandler(**cisco_switch) as net_connect:
         net_connect.enable()
-        commands = ['interface Gi1/0/35', 'no shutdown']
+        commands = ['interface x', 'no shutdown']
         net_connect.send_config_set(commands)
         print("Enabled")
 
@@ -235,14 +235,14 @@ def enable_jsalcido():
 def disable_cautry():
     with ConnectHandler(**cisco_switch) as net_connect:
         net_connect.enable()
-        commands = ['interface Gi1/0/5', 'shutdown']
+        commands = ['interface x', 'shutdown']
         net_connect.send_config_set(commands)
         print("Disabled")
 
 def enable_cautry():
     with ConnectHandler(**cisco_switch) as net_connect:
         net_connect.enable()
-        commands = ['interface Gi1/0/5', 'no shutdown']
+        commands = ['interface x', 'no shutdown']
         net_connect.send_config_set(commands)
         print("Enabled")
 
@@ -250,14 +250,14 @@ def enable_cautry():
 def disable_dvelasco():
     with ConnectHandler(**cisco_switch) as net_connect:
         net_connect.enable()
-        commands = ['interface Gi1/0/13', 'shutdown']
+        commands = ['interface x', 'shutdown']
         net_connect.send_config_set(commands)
         print("Disabled")
 
 def enable_dvelasco():
     with ConnectHandler(**cisco_switch) as net_connect:
         net_connect.enable()
-        commands = ['interface Gi1/0/13', 'no shutdown']
+        commands = ['interface x', 'no shutdown']
         net_connect.send_config_set(commands)
         print("Enabled")
 
@@ -265,14 +265,14 @@ def enable_dvelasco():
 def disable_ajuarez():
     with ConnectHandler(**mail_switch) as net_connect:
         net_connect.enable()
-        commands = ['interface Gi1/0/5', 'shutdown']
+        commands = ['interface x', 'shutdown']
         net_connect.send_config_set(commands)
         print("Disabled")
 
 def enable_ajuarez():
     with ConnectHandler(**mail_switch) as net_connect:
         net_connect.enable()
-        commands = ['interface Gi1/0/5', 'no shutdown']
+        commands = ['interface x', 'no shutdown']
         net_connect.send_config_set(commands)
         print("Enabled")
 
@@ -280,14 +280,14 @@ def enable_ajuarez():
 def disable_dhernandez():
     with ConnectHandler(**cisco_switch) as net_connect:
         net_connect.enable()
-        commands = ['interface Gi2/0/8', 'shutdown']
+        commands = ['interface x', 'shutdown']
         net_connect.send_config_set(commands)
         print("Disabled")
 
 def enable_dhernandez():
     with ConnectHandler(**cisco_switch) as net_connect:
         net_connect.enable()
-        commands = ['interface Gi2/0/8', 'no shutdown']
+        commands = ['interface x', 'no shutdown']
         net_connect.send_config_set(commands)
         print("Enabled")
 
@@ -295,14 +295,14 @@ def enable_dhernandez():
 def disable_sglanton():
     with ConnectHandler(**mail_switch) as net_connect:
         net_connect.enable()
-        commands = ['interface Gi1/0/14', 'shutdown']
+        commands = ['interface x', 'shutdown']
         net_connect.send_config_set(commands)
         print("Disabled")
 
 def enable_sglanton():
     with ConnectHandler(**mail_switch) as net_connect:
         net_connect.enable()
-        commands = ['interface Gi1/0/14', 'no shutdown']
+        commands = ['interface x', 'no shutdown']
         net_connect.send_config_set(commands)
         print("Enabled")
 
@@ -310,14 +310,14 @@ def enable_sglanton():
 def disable_alisby():
     with ConnectHandler(**mail_switch) as net_connect:
         net_connect.enable()
-        commands = ['interface Gi1/0/23', 'shutdown']
+        commands = ['interface x', 'shutdown']
         net_connect.send_config_set(commands)
         print("Disabled")
 
 def enable_alisby():
     with ConnectHandler(**mail_switch) as net_connect:
         net_connect.enable()
-        commands = ['interface Gi1/0/23', 'no shutdown']
+        commands = ['interface x', 'no shutdown']
         net_connect.send_config_set(commands)
         print("Enabled")
 
@@ -327,14 +327,14 @@ def enable_alisby():
 def disable_narenivas():
     with ConnectHandler(**cisco_switch) as net_connect:
         net_connect.enable()
-        commands = ['interface Gi1/0/30', 'shutdown']
+        commands = ['interface x', 'shutdown']
         net_connect.send_config_set(commands)
         print("Disabled")
 
 def enable_narenivas():
     with ConnectHandler(**cisco_switch) as net_connect:
         net_connect.enable()
-        commands = ['interface Gi1/0/30', 'no shutdown']
+        commands = ['interface x', 'no shutdown']
         net_connect.send_config_set(commands)
         print("Enabled")
 
@@ -342,14 +342,14 @@ def enable_narenivas():
 def disable_yrebolledo():
     with ConnectHandler(**cisco_switch) as net_connect:
         net_connect.enable()
-        commands = ['interface Gi1/0/40', 'shutdown']
+        commands = ['interface x', 'shutdown']
         net_connect.send_config_set(commands)
         print("Disabled")
 
 def enable_yrebolledo():
     with ConnectHandler(**cisco_switch) as net_connect:
         net_connect.enable()
-        commands = ['interface Gi1/0/40', 'no shutdown']
+        commands = ['interface x', 'no shutdown']
         net_connect.send_config_set(commands)
         print("Enabled")
         
@@ -357,14 +357,14 @@ def enable_yrebolledo():
 def disable_cbrown():
     with ConnectHandler(**cisco_switch) as net_connect:
         net_connect.enable()
-        commands = ['interface Gi1/0/22', 'shutdown']
+        commands = ['interface x', 'shutdown']
         net_connect.send_config_set(commands)
         print("Disabled")
 
 def enable_cbrown():
     with ConnectHandler(**cisco_switch) as net_connect:
         net_connect.enable()
-        commands = ['interface Gi1/0/22', 'no shutdown']
+        commands = ['interface x', 'no shutdown']
         net_connect.send_config_set(commands)
         print("Enabled")
 
@@ -372,14 +372,14 @@ def enable_cbrown():
 def disable_checkuser():
     with ConnectHandler(**cisco_switch) as net_connect:
         net_connect.enable()
-        commands = ['interface Gi2/0/10', 'shutdown']
+        commands = ['interface x', 'shutdown']
         net_connect.send_config_set(commands)
         print("Disabled")
 
 def enable_checkuser():
     with ConnectHandler(**cisco_switch) as net_connect:
         net_connect.enable()
-        commands = ['interface Gi2/0/10', 'no shutdown']
+        commands = ['interface x', 'no shutdown']
         net_connect.send_config_set(commands)
         print("Enabled")
 
@@ -389,14 +389,14 @@ def enable_checkuser():
 def disable_jcortez():
     with ConnectHandler(**mail_switch) as net_connect:
         net_connect.enable()
-        commands = ['interface Gi1/0/30', 'shutdown']
+        commands = ['interface x', 'shutdown']
         net_connect.send_config_set(commands)
         print("Disabled")
 
 def enable_jcortez():
     with ConnectHandler(**mail_switch) as net_connect:
         net_connect.enable()
-        commands = ['interface Gi1/0/30', 'no shutdown']
+        commands = ['interface x', 'no shutdown']
         net_connect.send_config_set(commands)
         print("Enabled")
 
@@ -404,14 +404,14 @@ def enable_jcortez():
 def disable_rcapps():
     with ConnectHandler(**cisco_switch) as net_connect:
         net_connect.enable()
-        commands = ['interface Gi1/0/28', 'shutdown']
+        commands = ['interface x', 'shutdown']
         net_connect.send_config_set(commands)
         print("Disabled")
 
 def enable_rcapps():
     with ConnectHandler(**cisco_switch) as net_connect:
         net_connect.enable()
-        commands = ['interface Gi1/0/28', 'no shutdown']
+        commands = ['interface x', 'no shutdown']
         net_connect.send_config_set(commands)
         print("Enabled")
 
@@ -419,14 +419,14 @@ def enable_rcapps():
 def disable_train2():
     with ConnectHandler(**cisco_switch) as net_connect:
         net_connect.enable()
-        commands = ['interface Gi5/0/35', 'shutdown']
+        commands = ['interface x', 'shutdown']
         net_connect.send_config_set(commands)
         print("Disabled")
 
 def enable_train2():
     with ConnectHandler(**cisco_switch) as net_connect:
         net_connect.enable()
-        commands = ['interface Gi5/0/35', 'no shutdown']
+        commands = ['interface x', 'no shutdown']
         net_connect.send_config_set(commands)
         print("Enabled")
 
@@ -434,14 +434,14 @@ def enable_train2():
 def disable_cartwright():
     with ConnectHandler(**cisco_switch) as net_connect:
         net_connect.enable()
-        commands = ['interface Gi5/0/42', 'shutdown']
+        commands = ['interface x', 'shutdown']
         net_connect.send_config_set(commands)
         print("Disabled")
 
 def enable_cartwright():
     with ConnectHandler(**cisco_switch) as net_connect:
         net_connect.enable()
-        commands = ['interface Gi5/0/42', 'no shutdown']
+        commands = ['interface x', 'no shutdown']
         net_connect.send_config_set(commands)
         print("Enabled")
 # Bobby Kimbro
@@ -452,14 +452,14 @@ def enable_cartwright():
 def disable_hmendoza():
     with ConnectHandler(**cisco_switch) as net_connect:
         net_connect.enable()
-        commands = ['interface Gi2/0/39', 'shutdown']
+        commands = ['interface x', 'shutdown']
         net_connect.send_config_set(commands)
         print("Disabled")
 
 def enable_hmendoza():
     with ConnectHandler(**cisco_switch) as net_connect:
         net_connect.enable()
-        commands = ['interface Gi2/0/39', 'no shutdown']
+        commands = ['interface x', 'no shutdown']
         net_connect.send_config_set(commands)
         print("Enabled")
 
@@ -467,14 +467,14 @@ def enable_hmendoza():
 def disable_rporras():
     with ConnectHandler(**cisco_switch) as net_connect:
         net_connect.enable()
-        commands = ['interface Gi2/0/34', 'shutdown']
+        commands = ['interface x', 'shutdown']
         net_connect.send_config_set(commands)
         print("Disabled")
 
 def enable_rporras():
     with ConnectHandler(**cisco_switch) as net_connect:
         net_connect.enable()
-        commands = ['interface Gi2/0/34', 'no shutdown']
+        commands = ['interface x', 'no shutdown']
         net_connect.send_config_set(commands)
         print("Enabled")
 
@@ -482,14 +482,14 @@ def enable_rporras():
 def disable_erivera():
     with ConnectHandler(**cisco_switch) as net_connect:
         net_connect.enable()
-        commands = ['interface Gi1/0/32', 'shutdown']
+        commands = ['interface x', 'shutdown']
         net_connect.send_config_set(commands)
         print("Disabled")
 
 def enable_erivera():
     with ConnectHandler(**cisco_switch) as net_connect:
         net_connect.enable()
-        commands = ['interface Gi1/0/32', 'no shutdown']
+        commands = ['interface x', 'no shutdown']
         net_connect.send_config_set(commands)
         print("Enabled")
 
@@ -497,14 +497,14 @@ def enable_erivera():
 def disable_ncamp():
     with ConnectHandler(**cisco_switch) as net_connect:
         net_connect.enable()
-        commands = ['interface Gi2/0/43', 'shutdown']
+        commands = ['interface x', 'shutdown']
         net_connect.send_config_set(commands)
         print("Disabled")
 
 def enable_ncamp():
     with ConnectHandler(**cisco_switch) as net_connect:
         net_connect.enable()
-        commands = ['interface Gi2/0/43', 'no shutdown']
+        commands = ['interface x', 'no shutdown']
         net_connect.send_config_set(commands)
         print("Enabled")
 
@@ -512,14 +512,14 @@ def enable_ncamp():
 def disable_agriffin():
     with ConnectHandler(**cisco_switch) as net_connect:
         net_connect.enable()
-        commands = ['interface Gi5/0/37', 'shutdown']
+        commands = ['interface x', 'shutdown']
         net_connect.send_config_set(commands)
         print("Disabled")
 
 def enable_agriffin():
     with ConnectHandler(**cisco_switch) as net_connect:
         net_connect.enable()
-        commands = ['interface Gi5/0/37', 'no shutdown']
+        commands = ['interface x', 'no shutdown']
         net_connect.send_config_set(commands)
         print("Enabled")
 
@@ -527,14 +527,14 @@ def enable_agriffin():
 def disable_bferris():
     with ConnectHandler(**cisco_switch) as net_connect:
         net_connect.enable()
-        commands = ['interface Gi1/0/2', 'shutdown']
+        commands = ['interface x', 'shutdown']
         net_connect.send_config_set(commands)
         print("Disabled")
 
 def enable_bferris():
     with ConnectHandler(**cisco_switch) as net_connect:
         net_connect.enable()
-        commands = ['interface Gi1/0/2', 'no shutdown']
+        commands = ['interface x', 'no shutdown']
         net_connect.send_config_set(commands)
         print("Enabled")        
 
