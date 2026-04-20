@@ -2,10 +2,10 @@ from netmiko import ConnectHandler
 
 cisco_switch = {
     'device_type': 'cisco_xe',
-    'host': '172.16.41.31',
-    'username': 'lcec',
-    'password': '@77|7uDE|1',
-    'secret': '@77|7uDE|1',
+    'host': 'x',
+    'username': 'x',
+    'password': 'x',
+    'secret': 'x',
 }
 
 with ConnectHandler(**cisco_switch) as net_connect:
