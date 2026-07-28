@@ -10,6 +10,6 @@ cisco_switch = {
 
 with ConnectHandler(**cisco_switch) as net_connect:
     net_connect.enable()
-    commands = ['interface Gi5/0/36', 'no shutdown']
+    commands = ['interface GiX', 'no shutdown']
     net_connect.send_config_set(commands)
     print("Enabled")
