@@ -1,4 +1,3 @@
-etwork map · MD
 Network Map — Port Enable/Disable GUI
 
 A Tkinter desktop application that displays a floor-plan image with Enable (E) and Disable (D) buttons overlaid at each employee's desk location. Clicking a button uses Netmiko to SSH into the relevant Cisco switch and shut down or re-enable that person's network interface — a visual "kill switch" panel for office network ports.
@@ -51,31 +50,3 @@ Two switch groups: most people are wired to cisco_switch; a handful (Anna Juarez
 One function pair per person/room, named after their initials (e.g. disable_dtarin / enable_dtarin for Delma Tarin).
 One button pair per person/room, placed with .place(x=..., y=...) at the map coordinates matching their desk.
 A few names are listed as comments only with no functions/buttons (Bobby Kimbro, Christian Fuksa — noted as "no ethernet").
-Known Issues
-Hardcoded interface name: every function uses the literal string 'interface x' — this is a placeholder that must be replaced with each person's actual switchport before the tool will function.
-Credentials in plaintext: switch credentials are stored directly in the script. Consider pulling them from environment variables, a .env file (with python-dotenv), or a secrets manager instead of committing them to source.
-Copy-paste bug: the "E" button for Jane Salcido is wired to the wrong handler —
-python
-  e_jsalcido = tk.Button(root, text="E", command=enable_ndominguez)
-
-This calls enable_ndominguez instead of enable_jsalcido, meaning clicking Jane Salcido's Enable button actually re-enables Nelly Dominguez's port. Should be:
-
-python
-  e_jsalcido = tk.Button(root, text="E", command=enable_jsalcido)
-No error handling: if a switch is unreachable or credentials are wrong, ConnectHandler will raise an exception that isn't caught, likely crashing that button's callback silently in the GUI.
-No confirmation dialog: clicking "D" immediately shuts down a port with no "are you sure?" prompt — easy to fat-finger and disconnect the wrong person.
-Duplicated logic: every disable/enable function is nearly identical (same commands, different switch object). This could be collapsed into two generic functions parameterized by switch + interface name, which would also make fixing the two issues above much easier and less error-prone.
-Suggested Improvements
-Replace the ~50 near-duplicate functions with a single reusable pair:
-python
-  def disable_port(switch, interface):
-      with ConnectHandler(**switch) as net_connect:
-          net_connect.enable()
-          net_connect.send_config_set([f'interface {interface}', 'shutdown'])
-
-  def enable_port(switch, interface):
-      with ConnectHandler(**switch) as net_connect:
-          net_connect.enable()
-          net_connect.send_config_set([f'interface {interface}', 'no shutdown'])
-
-Then drive both the button command= and interface data from a single list/dict of (name, switch, interface, x, y) tuples, generating buttons in a loop.
