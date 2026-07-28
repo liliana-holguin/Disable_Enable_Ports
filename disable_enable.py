@@ -5,7 +5,7 @@ from PIL import Image, ImageTk
 
 #################### Switch Info ####################
 cisco_switch = {
-    'device_type': 'cisco_xe',
+    'device_type': 'x',
     'host': 'x',
     'username': 'x',
     'password': 'x',
@@ -13,7 +13,7 @@ cisco_switch = {
 }
 
 mail_switch = {
-    'device_type': 'cisco_xe',
+    'device_type': 'x',
     'host': 'x',
     'username': 'x',
     'password': 'x',
